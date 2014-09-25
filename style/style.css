@@ -1,0 +1,26 @@
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+form{
+    margin-top:50px;
+}
+.submit{
+    clear: both;
+    margin: auto;
+    width: 30%;
+}
+.error{
+    width: 30%;
+    font-size: 18px;
+    color: red;
+    margin: auto;
+}
+.img{
+    float: right;
+    height: 150px;
+    width: 150px;
+}
