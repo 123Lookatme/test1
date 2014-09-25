@@ -57,7 +57,7 @@
       <file leaf-file-name="form.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="9" selection-start="3048" selection-end="3048" vertical-scroll-proportion="0.63704497" vertical-offset="782" max-vertical-offset="2754">
+            <state line="74" column="30" selection-start="2865" selection-end="2865" vertical-scroll-proportion="0.77022654" vertical-offset="782" max-vertical-offset="2754">
               <folding />
             </state>
           </provider>
@@ -311,10 +311,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-45" width="1696" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -406,7 +406,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="9" selection-start="3048" selection-end="3048" vertical-scroll-proportion="0.63704497" vertical-offset="782" max-vertical-offset="2754">
+        <state line="74" column="30" selection-start="2865" selection-end="2865" vertical-scroll-proportion="0.77022654" vertical-offset="782" max-vertical-offset="2754">
           <folding />
         </state>
       </provider>
