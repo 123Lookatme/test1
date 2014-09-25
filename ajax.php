@@ -25,16 +25,33 @@ if(isset($_POST['submited']))
 {
     $error='';
     $data=array();
-   foreach($_POST['submited'] as $k=> $v)
-   {
-       $data[$k]=trim(strip_tags(stripslashes($v)));
-   }
+    foreach($_POST['submited'] as $k=> $v)
+    {
+        switch($k)
+        {
+            case'file':if(file_exists($v))
+                        {
+                            $pos=strrpos($v,'/');
+                            $data[$k]=substr($v,$pos+1);
+                        }else{
+                            $error.='file not exists';
+                        }
+                break;
+            default:$data[strtolower($k)]=trim(strip_tags(stripslashes($v)));
+        }
+    }
     foreach($data as $k=> $v)
     {
         if(!$v)
             $error.='Invalid '.$k.'</br>';
     }
-    die(json_encode($data));
+    if($error)
+    {
+        die($error);
+    }else{
+        $db->add_data($data);
+    }
+
 }
 
 if(isset($_FILES['file']))
@@ -51,11 +68,11 @@ if(isset($_FILES['file']))
                 throw new RuntimeException('File not exist.');
             case UPLOAD_ERR_INI_SIZE:
             case UPLOAD_ERR_FORM_SIZE:
-                throw new RuntimeException('File size error.');
+                throw new RuntimeException('size error.');
             default:
                 throw new RuntimeException('Uncaught error.');
         }
-        if ($_FILES['file']['size'] > 30000) {
+        if ($_FILES['file']['size'] > 300000) {
             throw new RuntimeException('File size error.');
         }
 
@@ -77,7 +94,7 @@ if(isset($_FILES['file']))
         {
             throw new RuntimeException('Server Error.');
         }else{
-            print_r($_FILES);exit();
+            die($file);
         }
     } catch (RuntimeException $e) {
 

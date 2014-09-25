@@ -23,4 +23,10 @@ form{
     float: right;
     height: 150px;
     width: 150px;
+    position: relative;
+    background: no-repeat;
+}
+img{
+    max-width: 150px;
+    max-height: 150px;
 }

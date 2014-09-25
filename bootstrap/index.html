@@ -12,6 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
+    <link href="./style/loading.css" rel="stylesheet">
 
 
 
@@ -43,73 +44,95 @@
 <div class="container">
 
     <div class="form">
-    <form class="form-horizontal"  enctype="multipart/form-data" >
-        <fieldset>
+        <form class="form-horizontal"  enctype="multipart/form-data" >
+            <fieldset>
 
 
 
-            <!-- Select Basic -->
-            <div class="form-group type">
-                <label class="col-md-4 control-label" for="selecttype">Type</label>
-                <div class="col-md-4 ">
-                    <select id="selecttype" name="selecttype" class="form-control">
-                        <option value="0">---Select type----</option>
-                        <option value="1">Layout</option>
-                        <option value="2">Design</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group group" hidden="hidden">
-                <label class="col-md-4 control-label" for="selectgroup">Group</label>
-                <div class="col-md-4">
-                    <select id="selectgroup" name="group" class="form-control">
-
-                    </select>
-                </div>
-            </div>
-
-
-            <div class="form-group name" hidden="hidden">
-                <label class="col-md-4 control-label" for="name">Name</label>
-                <div class="col-md-4">
-                    <input id="name" name="" type="text" placeholder="" class="form-control input-md">
-                </div>
-            </div>
-
-            <div class="form-group link" hidden="hidden">
-                <label class="col-md-4 control-label" for="prependedtext">Link</label>
-                <div class="col-md-4">
-                    <div class="input-group" id="link">
-                        <span class="input-group-addon">http://</span>
-                        <input id="prependedtext" name="link" class="form-control" placeholder="example.com" type="text">
+                <!-- Select Basic -->
+                <div class="form-group type">
+                    <label class="col-md-4 control-label" for="selecttype">Type</label>
+                    <div class="col-md-4 ">
+                        <select id="selecttype" name="selecttype" class="form-control">
+                            <option value="0">---Select type----</option>
+                            <option value="1">Layout</option>
+                            <option value="2">Design</option>
+                        </select>
                     </div>
                 </div>
-            </div>
+                <div class="form-group group" hidden="hidden">
+                    <label class="col-md-4 control-label" for="selectgroup">Group</label>
+                    <div class="col-md-4">
+                        <select id="selectgroup" name="group" class="form-control">
 
-            <div class="form-group photo" hidden="hidden">
-                <label class="col-md-4 control-label" for="file">Photo</label>
-                <div class="col-md-4">
-                    <input type="file" name="file" data-filename-placement="inside">
-                    <div class="img"></div>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group" hidden="hidden">
-                <div class="submit">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+
+                <div class="form-group name" hidden="hidden">
+                    <label class="col-md-4 control-label" for="name">Name</label>
+                    <div class="col-md-4">
+                        <input id="name" name="" type="text" placeholder="" class="form-control input-md">
+                    </div>
                 </div>
-            </div>
+
+                <div class="form-group link" hidden="hidden">
+                    <label class="col-md-4 control-label" for="prependedtext">Link</label>
+                    <div class="col-md-4">
+                        <div class="input-group" id="link">
+                            <span class="input-group-addon">http://</span>
+                            <input id="prependedtext" name="link" class="form-control" placeholder="example.com" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group photo" hidden="hidden">
+                    <label class="col-md-4 control-label" for="file">Photo</label>
+                    <div class="col-md-4">
+                        <input type="file" name="file" data-filename-placement="inside">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                        <div class="img">
+                            <div id="floatingBarsG">
+                                <div class="blockG" id="rotateG_01">
+                                </div>
+                                <div class="blockG" id="rotateG_02">
+                                </div>
+                                <div class="blockG" id="rotateG_03">
+                                </div>
+                                <div class="blockG" id="rotateG_04">
+                                </div>
+                                <div class="blockG" id="rotateG_05">
+                                </div>
+                                <div class="blockG" id="rotateG_06">
+                                </div>
+                                <div class="blockG" id="rotateG_07">
+                                </div>
+                                <div class="blockG" id="rotateG_08">
+                                </div>
+                            </div>
+                            <img src=""/>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" hidden="hidden">
+                    <div class="submit">
+                        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
 
 
-            <div class="error"></div>
+                <div class="error"></div>
 
 
-        </fieldset>
+            </fieldset>
 
 
-    </form>
+        </form>
 
-</div>
+    </div>
 
 </div><!-- /.container -->
 

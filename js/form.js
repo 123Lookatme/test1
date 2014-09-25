@@ -4,7 +4,9 @@
 $(document).ready(function(){
     $('input[type=file]').bootstrapFileInput();
     $('.file-inputs').bootstrapFileInput();
+
     /*FORM CREATION*/
+
     $('#selecttype').on('change',function(){
         $('.error').html('');
         var select=$(this).find('option:selected');
@@ -56,11 +58,11 @@ $(document).ready(function(){
         var data={};
         $(':selected',this).each(function(){
             var value=$(this).val();
-            var id=$(this).closest($('.col-md-4')).prev().html();
+            var key=$(this).closest($('.col-md-4')).prev().html();
             if(value=='0')
-                error+='Select '+id+'</br>';
+                error+='Select '+key+'</br>';
             else{
-                data[id]=value;
+                data[key]=value;
             }
         });
         $('input',this).each(function(){
@@ -71,25 +73,47 @@ $(document).ready(function(){
                 {
                     case'text':data[$(this).closest($('.col-md-4')).prev().html()]=$(this).val();
                         break;
-                    case'file':;
-                       break;
+                    case'file':data['file']=$('.img>img').attr('src');
+                        break;
                 }
             }
         });
-        $('.error').html(error);
+        if(error.length>0)
+        {
+            $('.error').html(error);
+        }else{
+            $.ajax({
+                type:'POST',
+                url:'ajax.php',
+                data:{submited:data},
+                success:function(data){
+                    $('.error').html(data);
+                }
+            });
+        }
+
     });
 
     /*FILE UPLOAD*/
     $('.photo input').on('change',function(){
         var form=$('form');
-        var formData= new FormData(form);
+        var formData= new FormData(form[0]);
         loadImg(formData).done(function(data){
-            //$('.img').css('background','url(./img/'+data+')');
-            console.log(data);
+            if(isNaN(parseInt(data)))
+            {
+                $('.error').html(data);
+            }else{
+                $('.img>img').attr('src','img/'+data);
+                //$('.img').css('background-image','url(./img/'+data+')').css('background-size','100%');
+            }
+        }).then(function(){
+            $('#floatingBarsG').fadeIn();
+        }).always(function(){
+            $('#floatingBarsG').fadeOut();
         });
     });
 
-/*LIBRARY*/
+    /*LIBRARY*/
 
 
 
